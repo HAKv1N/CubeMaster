@@ -1,0 +1,2 @@
+# CubeMaster
+game: CubeMaster
