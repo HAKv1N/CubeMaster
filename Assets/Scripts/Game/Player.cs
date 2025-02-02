@@ -1,10 +1,10 @@
 using UnityEngine;
-<<<<<<< HEAD:Assets/Scripts/Player.cs
+
 using UnityEngine.SceneManagement;
 using static UnityEngine.UI.Image;
-=======
 
->>>>>>> c5520d197eabcef46637acd2aacf632e23bc0e30:Assets/Scripts/Game/Player.cs
+
+
 public class Player : MonoBehaviour
 {
     [SerializeField] KeyCode keyone;
