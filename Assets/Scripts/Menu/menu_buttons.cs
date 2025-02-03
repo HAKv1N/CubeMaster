@@ -14,7 +14,7 @@ public class menu_buttons : MonoBehaviour
     }
 
     public void start_game() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1;
     }
 
