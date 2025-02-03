@@ -204,7 +204,7 @@ Camera:
   m_GameObject: {fileID: 116999637}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2830189, g: 0.16052254, b: 0.14017445, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -213,7 +213,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -228,7 +228,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1401,7 +1401,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394162223}
-  - component: {fileID: 1394162222}
   - component: {fileID: 1394162221}
   m_Layer: 0
   m_Name: ---UI---
@@ -1423,18 +1422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esc_menu_panel: {fileID: 1122978503}
---- !u!114 &1394162222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394162220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07f4011d69216247bd6aee12a60da53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   fps: 0
   fps_text: {fileID: 2061035468}
 --- !u!4 &1394162223
