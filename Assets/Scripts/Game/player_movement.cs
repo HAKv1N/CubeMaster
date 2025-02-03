@@ -5,7 +5,7 @@ using static UnityEngine.UI.Image;
 
 
 
-public class Player : MonoBehaviour
+public class player_movement : MonoBehaviour
 {
     [SerializeField] KeyCode keyone;
     [SerializeField] KeyCode keytwo;
