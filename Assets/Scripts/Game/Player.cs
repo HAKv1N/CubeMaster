@@ -1,9 +1,6 @@
 using UnityEngine;
-
 using UnityEngine.SceneManagement;
 using static UnityEngine.UI.Image;
-
-
 
 public class Player: MonoBehaviour
 {
@@ -26,13 +23,10 @@ public class Player: MonoBehaviour
         {
             GetComponent<Rigidbody>().linearVelocity -= moveDirection;
         }
+
         if (Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -41,7 +35,6 @@ public class Player: MonoBehaviour
         if (this.CompareTag("Player") && other.CompareTag("Finish"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
         }
     }
 }
