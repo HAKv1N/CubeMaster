@@ -10,10 +10,10 @@ public class Player: MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement();
+        Movement();
     }
 
-    public void movement() {
+    public void Movement() {
         if (Input.GetKey(keyone))
         {
             GetComponent<Rigidbody>().linearVelocity += moveDirection;
@@ -36,5 +36,7 @@ public class Player: MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+      
     }
+ 
 }

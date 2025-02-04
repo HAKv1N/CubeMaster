@@ -1525,6 +1525,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1499466221}
     - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
+      propertyPath: canPush
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
       propertyPath: 'firstGroup.Array.data[0]'
       value: 
       objectReference: {fileID: 1686780416}
@@ -1563,7 +1567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044970282221675526, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.592
+      value: 11.67
       objectReference: {fileID: 0}
     - target: {fileID: 6044970282221675526, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: m_LocalPosition.y
