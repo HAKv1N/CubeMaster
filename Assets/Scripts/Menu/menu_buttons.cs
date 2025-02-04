@@ -6,6 +6,7 @@ public class menu_buttons : MonoBehaviour
 {
     [SerializeField] private GameObject ui_interface;
     [SerializeField] private GameObject ui_settings;
+    [SerializeField] private GameObject ui_shop;
     [SerializeField] private GameObject audio_panel;
 
     private void Start() {
@@ -30,5 +31,15 @@ public class menu_buttons : MonoBehaviour
 
     public void audio_settings() {
         audio_panel.SetActive(true);
+    }
+
+    public void open_shop() {
+        ui_interface.SetActive(false);
+        ui_shop.SetActive(true);
+    }
+
+    public void close_shop() {
+        ui_interface.SetActive(true);
+        ui_shop.SetActive(false);
     }
 }
