@@ -36,7 +36,10 @@ public class Player: MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-      
+
+        if (CompareTag("Player") && other.CompareTag("Coin")) {
+            shop_skins.money += 20f;
+            Destroy(other.gameObject);
+        }
     }
- 
 }

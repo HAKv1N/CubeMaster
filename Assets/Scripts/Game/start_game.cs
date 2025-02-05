@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class start_game : MonoBehaviour
 {
-    [SerializeField] private int item_id;
+    [SerializeField] private int skin_id;
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
     [SerializeField] private Mesh[] skins_1 = new Mesh[1];
@@ -11,8 +11,8 @@ public class start_game : MonoBehaviour
     [SerializeField] private Material[] materials_2 = new Material[1];
 
     private void Start() {
-        item_id = shop_skins.item_id;
-        if (item_id == 1) {
+        skin_id = shop_skins.skin_id;
+        if (skin_id == 1) {
             player_1.GetComponent<MeshFilter>().mesh = skins_1[0];
             player_1.GetComponent<MeshRenderer>().material = materials_1[0];
             Bounds bounds_1_1 = player_1.GetComponent<MeshFilter>().sharedMesh.bounds;

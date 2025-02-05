@@ -8,10 +8,15 @@ public class menu_buttons : MonoBehaviour
     [SerializeField] private GameObject ui_settings;
     [SerializeField] private GameObject ui_shop;
     [SerializeField] private GameObject audio_panel;
+    [SerializeField] private Text moneys_text;
 
     private void Start() {
         ui_interface.SetActive(true);
         Time.timeScale = 1;
+    }
+
+    private void Update() {
+        moneys_text.text = "Денег: " + (int) shop_skins.money;
     }
 
     public void start_game() {

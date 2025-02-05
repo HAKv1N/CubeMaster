@@ -7,10 +7,13 @@ public class game_ui : MonoBehaviour
     [SerializeField] private GameObject esc_menu_panel;
     [SerializeField] private float fps;
     [SerializeField] private Text fps_text;
+    [SerializeField] private Text money_text;
 
     private void Update() {
         open_esc_menu();
         check_fps();
+
+        money_text.text = "Денег: " + shop_skins.money;
     }
 
     public void exit_game() {
