@@ -272,7 +272,10 @@ MonoBehaviour:
   item_id: 1
   player_1: {fileID: 1765619191}
   player_2: {fileID: 908446040}
-  skin_1: {fileID: -5072188773914483968, guid: 59244e780cb1031448928a72bb8327ed, type: 3}
+  skin_1_1: {fileID: -5495902117074765545, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
+  skin_mat_1_1: {fileID: -876546973899608171, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
+  skin_1_2: {fileID: -5495902117074765545, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
+  skin_mat_1_2: {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
 --- !u!1001 &773267991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,10 +324,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1526951996321879125, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ab57bdef5da02a249861b90ce767984e, type: 2}
+    - target: {fileID: 1672409870077697317, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
     - target: {fileID: 3433592783563996526, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_Name
       value: Player_first
@@ -1309,6 +1336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3386906662508643664, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.54
