@@ -8,6 +8,11 @@ public class game_ui : MonoBehaviour
     [SerializeField] private float fps;
     [SerializeField] private Text fps_text;
     [SerializeField] private Text money_text;
+    [SerializeField] private AudioSource audiosource => GetComponent<AudioSource>();
+
+    private void Start() {
+        audiosource.volume = menu_ui.music_volume;
+    }
 
     private void Update() {
         open_esc_menu();
@@ -21,7 +26,7 @@ public class game_ui : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void open_esc_menu() {
+    private void open_esc_menu() {
         if (Input.GetKeyDown(KeyCode.Escape) && !esc_menu_panel.activeSelf) {
             esc_menu_panel.SetActive(true);
             Time.timeScale = 0f;
