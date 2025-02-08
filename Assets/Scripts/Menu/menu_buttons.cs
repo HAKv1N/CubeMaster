@@ -20,7 +20,7 @@ public class menu_buttons : MonoBehaviour
     }
 
     public void start_game() {
-        SceneManager.LoadScene("lvl1");
+        SceneManager.LoadScene("test");
         Time.timeScale = 1;
     }
 

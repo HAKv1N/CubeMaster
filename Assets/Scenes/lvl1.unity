@@ -279,12 +279,16 @@ MonoBehaviour:
   player_2: {fileID: 1349928959}
   skins_1:
   - {fileID: -5495902117074765545, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
+  - {fileID: -5495902117074765545, guid: 28255739863249046a722e1cba65f7d9, type: 3}
   skins_2:
   - {fileID: -5495902117074765545, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
+  - {fileID: -5495902117074765545, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
   materials_1:
   - {fileID: -876546973899608171, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
+  - {fileID: -876546973899608171, guid: 28255739863249046a722e1cba65f7d9, type: 3}
   materials_2:
   - {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
+  - {fileID: -876546973899608171, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
 --- !u!1 &483035151
 GameObject:
   m_ObjectHideFlags: 0
