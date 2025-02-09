@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shop_skins : MonoBehaviour
 {
@@ -7,9 +8,26 @@ public class shop_skins : MonoBehaviour
     [SerializeField] public static int skin_id = 0;
     [SerializeField] public static float money = 1000f;
     [SerializeField] public static bool[] skins_buy = new bool[2];
+    [SerializeField] private Sprite cross_icon;
+    [SerializeField] private Sprite tick_icon;
+    [SerializeField] private Image[] buy_success_image = new Image[2];
+
+    private void Start() {
+        check_buy();
+    }
 
     public void open_skins_buy() {
         skins_panel.SetActive(true);
+    }
+
+    private void check_buy() {
+        if (skins_buy[0]) {
+            buy_success_image[0].sprite = tick_icon;
+        }
+
+        if (skins_buy[1]) {
+            buy_success_image[1].sprite = tick_icon;
+        }
     }
 
     //skin_1
@@ -18,6 +36,7 @@ public class shop_skins : MonoBehaviour
             if (!skins_buy[0]) {
                 skins_buy[0] = true;
                 money -= 100f;
+                buy_success_image[0].sprite = tick_icon;
             }
         }
     }
@@ -34,6 +53,7 @@ public class shop_skins : MonoBehaviour
             if (!skins_buy[1]) {
                 skins_buy[1] = true;
                 money -= 100f;
+                buy_success_image[1].sprite = tick_icon;
             }
         }
     }
