@@ -30,6 +30,7 @@ public class game_ui : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !esc_menu_panel.activeSelf) {
             esc_menu_panel.SetActive(true);
             Time.timeScale = 0f;
+            fps_text.text = "fps: " + 0f;
         }
 
         else if (Input.GetKeyDown(KeyCode.Escape) && esc_menu_panel.activeSelf) {
