@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 116999639}
   - component: {fileID: 116999638}
   - component: {fileID: 116999642}
+  - component: {fileID: 116999643}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -209,7 +210,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -224,7 +225,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -284,6 +285,23 @@ MonoBehaviour:
   materials_2:
   - {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
   - {fileID: -876546973899608171, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
+--- !u!114 &116999643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116999637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7616c21d6127fdb49b31c51bb96c1210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera_main: {fileID: 116999637}
+  camera_speed: 15
+  player_first: {fileID: 1765619191}
+  player_first_vector: {x: 0, y: 0, z: 0}
+  camera_main_vector: {x: 0, y: 0, z: 0}
 --- !u!1 &350175691
 GameObject:
   m_ObjectHideFlags: 0
