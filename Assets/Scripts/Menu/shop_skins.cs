@@ -11,6 +11,7 @@ public class shop_skins : MonoBehaviour
     [SerializeField] private Sprite cross_icon;
     [SerializeField] private Sprite tick_icon;
     [SerializeField] private Image[] buy_success_image = new Image[2];
+    [SerializeField] private GameObject[] frames_buy = new GameObject[2];
 
     private void Start() {
         check_buy();
@@ -28,6 +29,8 @@ public class shop_skins : MonoBehaviour
         if (skins_buy[1]) {
             buy_success_image[1].sprite = tick_icon;
         }
+
+        frames_buy[skin_id - 1].SetActive(true);
     }
 
     //skin_1
@@ -44,6 +47,10 @@ public class shop_skins : MonoBehaviour
     public void skin_1_set() {
         if (skins_buy[0]) {
             skin_id = 1;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[0].SetActive(true);
         }
     }
 
@@ -61,6 +68,10 @@ public class shop_skins : MonoBehaviour
     public void skin_2_set() {
         if (skins_buy[1]) {
             skin_id = 2;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[1].SetActive(true);
         }
     }
 }
