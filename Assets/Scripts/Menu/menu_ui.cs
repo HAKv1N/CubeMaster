@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class menu_ui : MonoBehaviour
 {
-    [SerializeField] public static float music_volume = 1f;
+    [SerializeField] public static float music_volume = 0.2f;
     [SerializeField] private Slider music_volume_slider;
     [SerializeField] private AudioSource audiosource => GetComponent<AudioSource>();
 
