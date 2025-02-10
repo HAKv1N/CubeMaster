@@ -1,3 +1,5 @@
+using System.Security;
+using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.UI.Image;
@@ -41,5 +43,6 @@ public class Player: MonoBehaviour
             shop_skins.money += 20f;
             Destroy(other.gameObject);
         }
+
     }
 }
