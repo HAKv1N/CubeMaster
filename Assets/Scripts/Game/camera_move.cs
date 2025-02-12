@@ -10,9 +10,13 @@ public class camera_move : MonoBehaviour
     [SerializeField] private GameObject start_object;
     [SerializeField] private float camera_x;
     [SerializeField] private float camera_z;
+    [SerializeField] private float fov = 60f;
+    [SerializeField] public static bool camera_can_move = true;
 
     private void Update() {
-        movement_camera();
+        if (camera_can_move && Input.GetKey(KeyCode.Mouse1)) {
+            movement_camera();
+        }
     }
 
     private void movement_camera() {
@@ -23,5 +27,21 @@ public class camera_move : MonoBehaviour
         camera_main_vector = new Vector3(-z, 0, x);
 
         camera_main.transform.RotateAround(start_vector, camera_main_vector, camera_speed * Time.deltaTime);
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll > 0f) {
+            fov -= 5f;
+            fov = Mathf.Clamp(fov, 45, 60);
+            camera_main.GetComponent<Camera>().fieldOfView = fov;
+            return;
+        }
+
+        else if (scroll < 0f) {
+            fov += 5f;
+            fov = Mathf.Clamp(fov, 45, 60);
+            camera_main.GetComponent<Camera>().fieldOfView = fov;
+            return;
+        }
     }
 }
