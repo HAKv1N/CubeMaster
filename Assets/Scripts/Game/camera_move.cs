@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class camera_move : MonoBehaviour
 {
@@ -12,8 +13,15 @@ public class camera_move : MonoBehaviour
     [SerializeField] private float camera_z;
     [SerializeField] private float fov = 60f;
     [SerializeField] public static bool camera_can_move = true;
+    [SerializeField] private Toggle on_off_camera_move_toggle;
+
+    private void Start() {
+        on_off_camera_move_toggle.isOn = camera_can_move;
+    }
 
     private void Update() {
+        check_camera_move();
+
         if (camera_can_move && Input.GetKey(KeyCode.Mouse1)) {
             movement_camera();
         }
@@ -42,6 +50,16 @@ public class camera_move : MonoBehaviour
             fov = Mathf.Clamp(fov, 45, 60);
             camera_main.GetComponent<Camera>().fieldOfView = fov;
             return;
+        }
+    }
+
+    private void check_camera_move() {
+        if (on_off_camera_move_toggle.isOn) {
+            camera_can_move = true;
+        }
+
+        else if (!on_off_camera_move_toggle.isOn) {
+            camera_can_move = false;
         }
     }
 }
