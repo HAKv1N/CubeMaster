@@ -43,6 +43,10 @@ public class Player: MonoBehaviour
             shop_skins.money += 20f;
             Destroy(other.gameObject);
         }
+        if (this.CompareTag("Player") && other.CompareTag("Dead"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
     }
 }

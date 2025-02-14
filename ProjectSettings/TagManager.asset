@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Cube
   - Coin
+  - Let
+  - Walls
+  - Walls1
+  - Dead
   layers:
   - Default
   - TransparentFX
