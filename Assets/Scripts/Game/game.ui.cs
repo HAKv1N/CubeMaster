@@ -30,7 +30,7 @@ public class game_ui : MonoBehaviour
     public void exit_game()
     {
         SceneManager.LoadScene("menu");
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 
     private void open_esc_menu()
@@ -38,7 +38,7 @@ public class game_ui : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !esc_menu_panel.activeSelf)
         {
             esc_menu_panel.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
         }
 
         else if (Input.GetKeyDown(KeyCode.Escape) && esc_menu_panel.activeSelf)

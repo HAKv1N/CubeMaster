@@ -43,7 +43,6 @@ public class Player: MonoBehaviour
         }
 
         if (CompareTag("Player") && other.CompareTag("Coin")) {
-            shop_skins.money += 20f;
             coin_animator = other.gameObject.GetComponent<Animator>();
             coin_for_delete = other.gameObject;
             StartCoroutine(coin_anim());
@@ -59,5 +58,6 @@ public class Player: MonoBehaviour
         coin_animator.enabled = true;
         yield return new WaitForSeconds(1f);
         Destroy(coin_for_delete);
+        shop_skins.money += 20f;
     }
 }
