@@ -270,21 +270,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75f1574f28474ab0e20adfb8de619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin_id: 0
+  skin_id: 3
   player_1: {fileID: 1765619191}
   player_2: {fileID: 908446040}
   skins_1:
   - {fileID: -5495902117074765545, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
   - {fileID: -5495902117074765545, guid: 28255739863249046a722e1cba65f7d9, type: 3}
+  - {fileID: -5495902117074765545, guid: b12c731b00d176f478a4538347e2cc7c, type: 3}
   skins_2:
   - {fileID: -5495902117074765545, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
   - {fileID: -5495902117074765545, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
+  - {fileID: 2534964839176971238, guid: fb4d4172d36c1c540aaf16b3f2b4761c, type: 3}
   materials_1:
   - {fileID: -876546973899608171, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
   - {fileID: -876546973899608171, guid: 28255739863249046a722e1cba65f7d9, type: 3}
+  - {fileID: -876546973899608171, guid: b12c731b00d176f478a4538347e2cc7c, type: 3}
   materials_2:
   - {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
   - {fileID: -876546973899608171, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
+  - {fileID: -876546973899608171, guid: fb4d4172d36c1c540aaf16b3f2b4761c, type: 3}
 --- !u!114 &116999643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,7 +2644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.574
+      value: 0.728
       objectReference: {fileID: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.z

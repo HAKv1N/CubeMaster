@@ -48,5 +48,23 @@ public class start_game : MonoBehaviour
             player_2_collider.size = bounds_2_2.size;
             player_2.transform.localScale = new Vector3(50, 50, 50);
         }
+
+        if (skin_id == 3) {
+            player_1.GetComponent<MeshFilter>().mesh = skins_1[2];
+            player_1.GetComponent<MeshRenderer>().material = materials_1[2];
+            Bounds bounds_3_1 = player_1.GetComponent<MeshFilter>().sharedMesh.bounds;
+            BoxCollider player_1_collider = player_1.GetComponent<BoxCollider>();
+            player_1_collider.center = bounds_3_1.center;
+            player_1_collider.size = bounds_3_1.size;
+            player_1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+            player_2.GetComponent<MeshFilter>().mesh = skins_2[2];
+            player_2.GetComponent<MeshRenderer>().material = materials_2[2];
+            Bounds bounds_3_2 = player_2.GetComponent<MeshFilter>().sharedMesh.bounds;
+            BoxCollider player_2_collider = player_2.GetComponent<BoxCollider>();
+            player_2_collider.center = bounds_3_2.center;
+            player_2_collider.size = bounds_3_2.size;
+            player_2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+        }
     }
 }
