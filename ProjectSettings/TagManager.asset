@@ -10,6 +10,7 @@ TagManager:
   - Walls
   - Walls1
   - Dead
+  - key
   layers:
   - Default
   - TransparentFX
