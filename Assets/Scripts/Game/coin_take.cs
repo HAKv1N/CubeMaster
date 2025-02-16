@@ -4,13 +4,13 @@ using UnityEngine;
 public class coin_take : MonoBehaviour
 {
     [SerializeField] private Animator coin_animator;
-    [SerializeField] private bool coin_take_true = true;
+    [SerializeField] private bool coin_take_can = true;
     [SerializeField] private GameObject effects;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Coin") && other.CompareTag("Player") && coin_take_true) {
-            coin_take_true = false;
+        if (CompareTag("Coin") && other.CompareTag("Player") && coin_take_can) {
+            coin_take_can = false;
             coin_animator = GetComponent<Animator>();
             StartCoroutine(coin_anim());
         }

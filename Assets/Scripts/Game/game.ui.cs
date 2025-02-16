@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,10 +13,21 @@ public class game_ui : MonoBehaviour
     [SerializeField] private float timer_for_drop_coin = 25f;
     [SerializeField] private GameObject coin_drop;
     [SerializeField] private Vector3 coin_drop_vector;
+    [SerializeField] private GameObject blackout_fon;
+    [SerializeField] private Animator blackout_fon_animator;
 
     private void Start()
     {
         audiosource.volume = menu_ui.music_volume;
+        StartCoroutine("blackout_fon_start");
+    }
+
+    IEnumerator blackout_fon_start() {
+        blackout_fon.SetActive(true);
+        blackout_fon_animator.SetBool("exit", false);
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
+        blackout_fon.SetActive(false);
     }
 
     private void Update()
@@ -29,6 +41,13 @@ public class game_ui : MonoBehaviour
 
     public void exit_game()
     {
+        StartCoroutine("blackout_fon_exit");
+    }
+
+    IEnumerator blackout_fon_exit() {
+        blackout_fon.SetActive(true);
+        blackout_fon_animator.SetBool("exit", true);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("menu");
         Time.timeScale = 1f;
     }

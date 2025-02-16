@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,10 +10,20 @@ public class menu_buttons : MonoBehaviour
     [SerializeField] private GameObject ui_shop;
     [SerializeField] private GameObject audio_panel;
     [SerializeField] private Text moneys_text;
+    [SerializeField] private GameObject blackout_fon;
+    [SerializeField] private Animator blackout_fon_animator;
 
     private void Start() {
         ui_interface.SetActive(true);
         Time.timeScale = 1;
+        StartCoroutine("blackout_fon_start_menu");
+    }
+
+    IEnumerator blackout_fon_start_menu() {
+        blackout_fon.SetActive(true);
+        blackout_fon_animator.SetBool("start_game", false);
+        yield return new WaitForSeconds(1.5f);
+        blackout_fon.SetActive(false);
     }
 
     private void Update() {
@@ -20,6 +31,13 @@ public class menu_buttons : MonoBehaviour
     }
 
     public void start_game() {
+        StartCoroutine("start_game_button");
+    }
+
+    IEnumerator start_game_button() {
+        blackout_fon.SetActive(true);
+        blackout_fon_animator.SetBool("start_game", true);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("test");
         Time.timeScale = 1;
     }

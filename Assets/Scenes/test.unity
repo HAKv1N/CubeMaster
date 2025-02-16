@@ -270,25 +270,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75f1574f28474ab0e20adfb8de619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin_id: 3
+  skin_id: 0
   player_1: {fileID: 1765619191}
   player_2: {fileID: 908446040}
   skins_1:
-  - {fileID: -5495902117074765545, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
-  - {fileID: -5495902117074765545, guid: 28255739863249046a722e1cba65f7d9, type: 3}
-  - {fileID: -5495902117074765545, guid: b12c731b00d176f478a4538347e2cc7c, type: 3}
+  - {fileID: 6020266894799483353, guid: 4a759fd8bd4904f45ba96ddc26896f45, type: 3}
+  - {fileID: 925235447433839151, guid: 16d03e71c7de0ec4486e3221b9d4b99e, type: 3}
+  - {fileID: 3115414699912920131, guid: 4825970e4c400824cb69a9a0450b1d15, type: 3}
   skins_2:
-  - {fileID: -5495902117074765545, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
-  - {fileID: -5495902117074765545, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
-  - {fileID: 2534964839176971238, guid: fb4d4172d36c1c540aaf16b3f2b4761c, type: 3}
-  materials_1:
-  - {fileID: -876546973899608171, guid: 8cb32cfc5a97c7b4e8a515d23a0753e5, type: 3}
-  - {fileID: -876546973899608171, guid: 28255739863249046a722e1cba65f7d9, type: 3}
-  - {fileID: -876546973899608171, guid: b12c731b00d176f478a4538347e2cc7c, type: 3}
-  materials_2:
-  - {fileID: -876546973899608171, guid: 1f72ae4a6dcd0a54fafc19027cbb3850, type: 3}
-  - {fileID: -876546973899608171, guid: 26bcb85178fd02949a977daf1130889d, type: 3}
-  - {fileID: -876546973899608171, guid: fb4d4172d36c1c540aaf16b3f2b4761c, type: 3}
+  - {fileID: 4225356843475253522, guid: 448f09b5da4bef642a1d39bd2c2784f5, type: 3}
+  - {fileID: 6826698124157217504, guid: 98ab39ed7003c6a42a169dc2a7717779, type: 3}
+  - {fileID: 8563928255878516311, guid: e54d755c3ff7a7e49a657e7f7f01e727, type: 3}
 --- !u!114 &116999643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,6 +962,104 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &811539664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811539665}
+  - component: {fileID: 811539668}
+  - component: {fileID: 811539667}
+  - component: {fileID: 811539666}
+  m_Layer: 5
+  m_Name: blackout_fon(image)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &811539665
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811539664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1232917843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &811539666
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811539664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad4ca5fde157f8749a698672619412c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &811539667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811539664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &811539668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811539664}
+  m_CullTransparentMesh: 1
 --- !u!4 &853139628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4860227670800176476, guid: c8b1d91850113b042a0dfb720e5a642b, type: 3}
@@ -1022,6 +1112,8 @@ MonoBehaviour:
   timer_for_drop_coin: 25
   coin_drop: {fileID: 797934259}
   coin_drop_vector: {x: 0, y: 0, z: 0}
+  blackout_fon: {fileID: 811539664}
+  blackout_fon_animator: {fileID: 811539666}
 --- !u!4 &1006032621
 Transform:
   m_ObjectHideFlags: 0
@@ -1402,6 +1494,7 @@ RectTransform:
   - {fileID: 2023506223}
   - {fileID: 1408465009}
   - {fileID: 797934260}
+  - {fileID: 811539665}
   m_Father: {fileID: 1006032621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

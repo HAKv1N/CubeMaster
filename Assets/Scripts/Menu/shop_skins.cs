@@ -30,7 +30,14 @@ public class shop_skins : MonoBehaviour
             buy_success_image[1].sprite = tick_icon;
         }
 
-        frames_buy[skin_id - 1].SetActive(true);
+        if (skins_buy[2]) {
+            buy_success_image[2].sprite = tick_icon;
+        }
+
+        
+        if (skin_id > 0) {
+            frames_buy[skin_id - 1].SetActive(true);
+        }
     }
 
     //skin_1
