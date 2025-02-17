@@ -315,6 +315,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effects: {fileID: 1292168311}
+--- !u!1 &788575905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3433592783563996526, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+  m_PrefabInstance: {fileID: 838171235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &788575912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788575905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a043f8fd991d44ad3259ffc2ce650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 0}
 --- !u!1001 &831857231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -329,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4186389205270796132, guid: d73863a2113229142a1f034a86fdaa8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1625175
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 4186389205270796132, guid: d73863a2113229142a1f034a86fdaa8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -337,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4186389205270796132, guid: d73863a2113229142a1f034a86fdaa8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.52
+      value: 2.58
       objectReference: {fileID: 0}
     - target: {fileID: 4186389205270796132, guid: d73863a2113229142a1f034a86fdaa8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -393,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526951996321879125, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.42
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 1526951996321879125, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_LocalRotation.w
@@ -434,7 +452,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3433592783563996526, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788575912}
   m_SourcePrefab: {fileID: 100100000, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
 --- !u!1001 &1166517717
 PrefabInstance:
@@ -446,7 +467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.68
+      value: -9.56
       objectReference: {fileID: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.y
@@ -454,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.138323
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 5945404487138932663, guid: a76fcd3182dbfd543b8524b5c699da31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -722,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526951996321879125, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8711
+      value: -9.48
       objectReference: {fileID: 0}
     - target: {fileID: 1526951996321879125, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -763,6 +784,18 @@ PrefabInstance:
     - target: {fileID: 3433592783563996526, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433592783563996526, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238300661040599323, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393822210389258, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4972721525276354001, guid: a1d4c850ade5e2e438d2a2551c24ad70, type: 3}

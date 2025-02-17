@@ -10,6 +10,10 @@ public class KeyActivator : MonoBehaviour
         if (other.CompareTag("key"))
         {
             Destroy(other.gameObject);
+            if (other.CompareTag("Door"))
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 
