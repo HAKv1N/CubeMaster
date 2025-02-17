@@ -7,11 +7,11 @@ public class shop_skins : MonoBehaviour
     [SerializeField] private GameObject skins_panel;
     [SerializeField] public static int skin_id = 0;
     [SerializeField] public static float money = 1000f;
-    [SerializeField] public static bool[] skins_buy = new bool[3];
+    [SerializeField] public static bool[] skins_buy = new bool[4];
     [SerializeField] private Sprite cross_icon;
     [SerializeField] private Sprite tick_icon;
-    [SerializeField] private Image[] buy_success_image = new Image[2];
-    [SerializeField] private GameObject[] frames_buy = new GameObject[2];
+    [SerializeField] private Image[] buy_success_image = new Image[4];
+    [SerializeField] private GameObject[] frames_buy = new GameObject[4];
 
     private void Start() {
         check_buy();
@@ -32,6 +32,10 @@ public class shop_skins : MonoBehaviour
 
         if (skins_buy[2]) {
             buy_success_image[2].sprite = tick_icon;
+        }
+
+        if (skins_buy[3]) {
+            buy_success_image[3].sprite = tick_icon;
         }
 
         
@@ -100,6 +104,27 @@ public class shop_skins : MonoBehaviour
                 frames_buy[i].SetActive(false);
             }
             frames_buy[2].SetActive(true);
+        }
+    }
+
+    //skin_4
+    public void buy_skin_4() {
+        if (money >= 100f) {
+            if (!skins_buy[3]) {
+                skins_buy[3] = true;
+                money -= 100f;
+                buy_success_image[3].sprite = tick_icon;
+            }
+        }
+    }
+
+    public void skin_4_set() {
+        if (skins_buy[3]) {
+            skin_id = 4;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[3].SetActive(true);
         }
     }
 }

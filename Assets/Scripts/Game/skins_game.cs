@@ -6,8 +6,8 @@ public class skins_game : MonoBehaviour
     [SerializeField] private int skin_id;
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
-    [SerializeField] private GameObject[] skins_1 = new GameObject[3];
-    [SerializeField] private GameObject[] skins_2 = new GameObject[3];
+    [SerializeField] private GameObject[] skins_1 = new GameObject[4];
+    [SerializeField] private GameObject[] skins_2 = new GameObject[4];
 
     private void Start() {
         skin_id = shop_skins.skin_id;
@@ -50,6 +50,20 @@ public class skins_game : MonoBehaviour
             skin_3_2.transform.localScale = new Vector3(40, 40, 40);
             skin_3_2.transform.position = player_2.transform.position;
             Instantiate(skin_3_2);
+            Destroy(player_2);
+        }
+
+        if (skin_id == 4) {
+            GameObject skin_4_1 = skins_1[3];
+            skin_4_1.transform.localScale = new Vector3(50, 50, 50);
+            skin_4_1.transform.position = player_1.transform.position;
+            Instantiate(skin_4_1);
+            Destroy(player_1);
+
+            GameObject skin_4_2 = skins_2[3];
+            skin_4_2.transform.localScale = new Vector3(50, 50, 50);
+            skin_4_2.transform.position = player_2.transform.position;
+            Instantiate(skin_4_2);
             Destroy(player_2);
         }
     }
