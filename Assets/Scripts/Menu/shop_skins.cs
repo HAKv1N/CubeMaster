@@ -71,10 +71,10 @@ public class shop_skins : MonoBehaviour
 
     //skin_2
     public void buy_skin_2() {
-        if (money >= 200f) {
+        if (money >= 100f) {
             if (!skins_buy[1]) {
                 skins_buy[1] = true;
-                money -= 200f;
+                money -= 100f;
                 buy_success_image[1].sprite = tick_icon;
             }
         }
@@ -113,10 +113,10 @@ public class shop_skins : MonoBehaviour
 
     //skin_4
     public void buy_skin_4() {
-        if (money >= 100f) {
+        if (money >= 200f) {
             if (!skins_buy[3]) {
                 skins_buy[3] = true;
-                money -= 100f;
+                money -= 200f;
                 buy_success_image[3].sprite = tick_icon;
             }
         }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Security;
-using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.UI.Image;
@@ -10,6 +9,7 @@ public class Player: MonoBehaviour
     [SerializeField] KeyCode keyone;
     [SerializeField] KeyCode keytwo;
     [SerializeField] Vector3 moveDirection;
+    [SerializeField] public static bool can_move = true;
 
     private void FixedUpdate()
     {
@@ -17,12 +17,12 @@ public class Player: MonoBehaviour
     }
 
     public void Movement() {
-        if (Input.GetKey(keyone))
+        if (Input.GetKey(keyone) && can_move)
         {
             GetComponent<Rigidbody>().linearVelocity += moveDirection;
         }
 
-        if (Input.GetKey(keytwo))
+        if (Input.GetKey(keytwo) && can_move)
         {
             GetComponent<Rigidbody>().linearVelocity -= moveDirection;
         }
