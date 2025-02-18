@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7096288311365445133, guid: 4b0a9e7c39d91fc47a84d295a9ddb15f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.49
+      value: 4.53
       objectReference: {fileID: 0}
     - target: {fileID: 7096288311365445133, guid: 4b0a9e7c39d91fc47a84d295a9ddb15f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -926,7 +926,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1011,7 +1011,7 @@ Animator:
   m_GameObject: {fileID: 797934259}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b69c0ccfef0d67346bf957b348c19c73, type: 2}
+  m_Controller: {fileID: 9100000, guid: d46f9d6309854af478700d0e1f9199e6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
