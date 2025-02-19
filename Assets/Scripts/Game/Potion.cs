@@ -33,7 +33,7 @@ public class Potion : MonoBehaviour
         player_1.transform.position = player_2_vector;
         player_2.transform.position = player_1_vector;
 
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.3f);
         Player.can_move = true;
         Destroy(gameObject);
     }
