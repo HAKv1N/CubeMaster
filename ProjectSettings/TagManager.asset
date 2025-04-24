@@ -11,6 +11,7 @@ TagManager:
   - key
   - Door
   - Potion
+  - Teleport
   layers:
   - Default
   - TransparentFX
