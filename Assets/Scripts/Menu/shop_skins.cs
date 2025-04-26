@@ -18,7 +18,7 @@ public class shop_skins : MonoBehaviour
     }
 
     public void open_skins_buy() {
-        skins_panel.SetActive(true);
+        skins_panel.SetActive(!skins_panel.activeSelf);
     }
 
     private void check_buy() {

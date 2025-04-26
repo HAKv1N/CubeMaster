@@ -12,6 +12,7 @@ public class menu_buttons : MonoBehaviour
     [SerializeField] private Text moneys_text;
     [SerializeField] private GameObject blackout_fon;
     [SerializeField] private Animator blackout_fon_animator;
+    [SerializeField] private GameObject level_choose_panel;
 
     private void Start() {
         ui_interface.SetActive(true);
@@ -31,15 +32,7 @@ public class menu_buttons : MonoBehaviour
     }
 
     public void start_game() {
-        StartCoroutine("start_game_button");
-    }
-
-    IEnumerator start_game_button() {
-        blackout_fon.SetActive(true);
-        blackout_fon_animator.SetBool("start_game", true);
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("test");
-        Time.timeScale = 1;
+        level_choose_panel.SetActive(!level_choose_panel.activeSelf);
     }
 
     public void open_settings_menu() {
@@ -53,7 +46,7 @@ public class menu_buttons : MonoBehaviour
     }
 
     public void audio_settings() {
-        audio_panel.SetActive(true);
+        audio_panel.SetActive(!audio_panel.activeSelf);
     }
 
     public void open_shop() {
