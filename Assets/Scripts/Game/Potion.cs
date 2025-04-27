@@ -9,7 +9,7 @@ public class Potion : MonoBehaviour
     [SerializeField] private GameObject player_2;
     [SerializeField] private Vector3 player_2_vector;
     [SerializeField] private bool can_take_potion = true;
-    [SerializeField] private Animator potion_animator => GetComponent<Animator>();
+    [SerializeField] private Animator potion_animator;
     [SerializeField] private GameObject effects;
 
     void OnTriggerEnter(Collider other)
@@ -26,9 +26,7 @@ public class Potion : MonoBehaviour
         effects.SetActive(true);
 
         yield return new WaitForSeconds(1f);
-        player_1 = skins_game.player_1_main;
         player_1_vector = player_1.transform.position;
-        player_2 = skins_game.player_2_main;
         player_2_vector = player_2.transform.position;
         player_1.transform.position = player_2_vector;
         player_2.transform.position = player_1_vector;
