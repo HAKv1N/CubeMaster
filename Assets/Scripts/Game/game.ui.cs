@@ -15,9 +15,11 @@ public class game_ui : MonoBehaviour
     [SerializeField] private Vector3 coin_drop_vector;
     [SerializeField] private GameObject blackout_fon;
     [SerializeField] private Animator blackout_fon_animator;
+    [SerializeField] private Text lvl_text;
 
     private void Start()
     {
+        check_lvl();
         audiosource.volume = menu_ui.music_volume;
         StartCoroutine("blackout_fon_start");
     }
@@ -90,5 +92,9 @@ public class game_ui : MonoBehaviour
         timer_for_drop_coin = 25f;
         coin_drop.SetActive(false);
         shop_skins.money += 50f;
+    }
+
+    private void check_lvl() {
+        lvl_text.text = "Уровень: " + SceneManager.GetActiveScene().buildIndex;
     }
 }
