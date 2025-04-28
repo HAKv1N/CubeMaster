@@ -6335,7 +6335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5249470c0833db54f975d188f28d0b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvl_id: 1
+  lvl_id: 2
   blackout_fon: {fileID: 2095314113}
   blackout_fon_animator: {fileID: 2095314115}
 --- !u!1 &1385597560
