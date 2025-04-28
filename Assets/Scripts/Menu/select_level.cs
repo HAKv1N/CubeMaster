@@ -15,9 +15,7 @@ public class select_level : MonoBehaviour
     }
 
     public void RunLevel() {
-        if (!lvls_complete[lvl_id]) {
-            StartCoroutine("start_game_button");
-        }
+        StartCoroutine("start_game_button");
     }
 
     IEnumerator start_game_button() {
