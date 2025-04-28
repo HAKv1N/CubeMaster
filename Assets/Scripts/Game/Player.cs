@@ -44,6 +44,12 @@ public class Player: MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        // ускорение
+        if (this.CompareTag("Player") && other.CompareTag("boost"))
+        {
+           GetComponent<Rigidbody>().linearVelocity += moveDirection * 3;
+        }
+
     }
 
 }

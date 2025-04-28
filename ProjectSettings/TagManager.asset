@@ -12,6 +12,7 @@ TagManager:
   - Door
   - Potion
   - Teleport
+  - boost
   layers:
   - Default
   - TransparentFX
