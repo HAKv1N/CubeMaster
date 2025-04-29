@@ -23,9 +23,12 @@ public class Teleport : MonoBehaviour
         teleport_out_vector = teleport_out.transform.position;
         can_teleport = false;
         Player.can_move = false;
+        player.GetComponentInChildren<Animator>().SetBool("teleport_on", true);
         yield return new WaitForSeconds(1);
         player.transform.position = teleport_out_vector;
         Player.can_move = true;
+        yield return new WaitForSeconds(1f);
+        player.GetComponentInChildren<Animator>().SetBool("teleport_on", false);
         yield return new WaitForSeconds(7);
         effects.SetActive(false);
         can_teleport = true;

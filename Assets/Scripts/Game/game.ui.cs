@@ -89,6 +89,11 @@ public class game_ui : MonoBehaviour
 
     public void get_drop_coin()
     {
+        StartCoroutine("get_coin");
+    }
+
+    IEnumerator get_coin() {
+        yield return new WaitForSeconds(0.5f);
         timer_for_drop_coin = 25f;
         coin_drop.SetActive(false);
         shop_skins.money += 50f;
