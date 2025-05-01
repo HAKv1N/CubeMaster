@@ -25,13 +25,23 @@ public class Emotes : MonoBehaviour
             emote_active = 3;
             StartCoroutine("start_emote");
         }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && can_use_emote) {
+            emote_active = 4;
+            StartCoroutine("start_emote");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && can_use_emote) {
+            emote_active = 5;
+            StartCoroutine("start_emote");
+        }
     }
 
     IEnumerator start_emote() {
         can_use_emote = false;
         Player.can_move = false;
         gameObject.GetComponent<Animator>().SetInteger("emote", emote_active);
-        float emote_cooldown = 1.8f;
+        float emote_cooldown = 1.9f;
         yield return new WaitForSeconds(emote_cooldown);
         gameObject.GetComponent<Animator>().SetInteger("emote", 0);
         can_use_emote = true;
