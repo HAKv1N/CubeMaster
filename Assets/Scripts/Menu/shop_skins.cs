@@ -92,10 +92,10 @@ public class shop_skins : MonoBehaviour
 
     //skin_3
     public void buy_skin_3() {
-        if (money >= 300f) {
+        if (money >= 200f) {
             if (!skins_buy[2]) {
                 skins_buy[2] = true;
-                money -= 300f;
+                money -= 200f;
                 buy_success_image[2].sprite = tick_icon;
             }
         }
@@ -134,10 +134,10 @@ public class shop_skins : MonoBehaviour
 
     //skin_5
     public void buy_skin_5() {
-        if (money >= 200f) {
+        if (money >= 300f) {
             if (!skins_buy[4]) {
                 skins_buy[4] = true;
-                money -= 200f;
+                money -= 300f;
                 buy_success_image[4].sprite = tick_icon;
             }
         }
@@ -150,6 +150,27 @@ public class shop_skins : MonoBehaviour
                 frames_buy[i].SetActive(false);
             }
             frames_buy[4].SetActive(true);
+        }
+    }
+
+    //skin_6
+    public void buy_skin_6() {
+        if (money >= 300f) {
+            if (!skins_buy[5]) {
+                skins_buy[5] = true;
+                money -= 300f;
+                buy_success_image[5].sprite = tick_icon;
+            }
+        }
+    }
+
+    public void skin_6_set() {
+        if (skins_buy[5]) {
+            skin_id = 5;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[5].SetActive(true);
         }
     }
 }

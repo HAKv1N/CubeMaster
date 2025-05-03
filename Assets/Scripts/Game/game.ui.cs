@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,7 +8,9 @@ public class game_ui : MonoBehaviour
 {
     [SerializeField] private GameObject esc_menu_panel;
     [SerializeField] private float fps;
+    [SerializeField] private static bool can_check_fps = true; 
     [SerializeField] private Text fps_text;
+    [SerializeField] private float timer_fps = 1f;
     [SerializeField] private Text money_text;
     [SerializeField] private AudioSource audiosource => GetComponent<AudioSource>();
     [SerializeField] private float timer_for_drop_coin = 25f;
@@ -16,10 +19,12 @@ public class game_ui : MonoBehaviour
     [SerializeField] private GameObject blackout_fon;
     [SerializeField] private Animator blackout_fon_animator;
     [SerializeField] private Text lvl_text;
+    [SerializeField] private Toggle on_off_fps_toggle;
 
     private void Start()
     {
         check_lvl();
+        on_off_fps_toggle.isOn = can_check_fps;
         audiosource.volume = menu_ui.music_volume;
         StartCoroutine("blackout_fon_start");
     }
@@ -37,6 +42,7 @@ public class game_ui : MonoBehaviour
         open_esc_menu();
         check_fps();
         drop_coins();
+        on_off_fps();
 
         money_text.text = "Денег: " + shop_skins.money;
     }
@@ -59,20 +65,27 @@ public class game_ui : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !esc_menu_panel.activeSelf)
         {
             esc_menu_panel.SetActive(true);
-            Time.timeScale = 1f;
         }
 
         else if (Input.GetKeyDown(KeyCode.Escape) && esc_menu_panel.activeSelf)
         {
             esc_menu_panel.SetActive(false);
-            Time.timeScale = 1f;
         }
     }
 
     private void check_fps()
     {
-        fps = 1f / Time.deltaTime;
-        fps_text.text = "fps: " + (int)fps;
+        if (can_check_fps) {
+            fps_text.gameObject.SetActive(true);
+            timer_fps -= 1 * Time.deltaTime;
+            if (timer_fps <= 0) {
+                fps = 1f / Time.deltaTime;
+                fps_text.text = "fps: " + (int) fps;
+                timer_fps = 1f;
+            }
+        }
+
+        else fps_text.gameObject.SetActive(false);
     }
 
     private void drop_coins()
@@ -101,5 +114,9 @@ public class game_ui : MonoBehaviour
 
     private void check_lvl() {
         lvl_text.text = "Уровень: " + SceneManager.GetActiveScene().buildIndex;
+    }
+
+    private void on_off_fps() {
+        can_check_fps = on_off_fps_toggle.isOn;
     }
 }
