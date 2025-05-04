@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Security;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using static UnityEngine.UI.Image;
 
@@ -8,8 +9,9 @@ public class Player: MonoBehaviour
 {
     [SerializeField] KeyCode keyone;
     [SerializeField] KeyCode keytwo;
-    [SerializeField] Vector3 moveDirection;
+    [SerializeField] Vector3 moveDirection = new Vector3(1, 0, 0);
     [SerializeField] public static bool can_move = true;
+    float speed = 3f;
 
     private void FixedUpdate()
     {
@@ -47,9 +49,13 @@ public class Player: MonoBehaviour
         // ускорение
         if (this.CompareTag("Player") && other.CompareTag("boost"))
         {
-           GetComponent<Rigidbody>().linearVelocity += moveDirection * 3;
+           moveDirection = new Vector3(0, 0, 3);
+           GetComponent<Rigidbody>().linearVelocity += moveDirection;
         }
+        else {moveDirection = new Vector3(0, 0, 1);}
 
     }
 
 }
+
+
