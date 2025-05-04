@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class KeyActivator : MonoBehaviour
 {
-    [SerializeField] private GameObject effects;
+    
     private int key = 0;
     private void OnTriggerEnter(Collider other)
     {
