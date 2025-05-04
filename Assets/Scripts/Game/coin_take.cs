@@ -5,6 +5,7 @@ public class coin_take : MonoBehaviour
 {
     [SerializeField] private Animator coin_animator;
     [SerializeField] private bool coin_take_can = true;
+    [SerializeField] public static int coin_add = 20;
     [SerializeField] private GameObject effects;
 
     private void OnTriggerEnter(Collider other)
@@ -12,7 +13,7 @@ public class coin_take : MonoBehaviour
         if (CompareTag("Coin") && other.CompareTag("Player") && coin_take_can) {
             coin_take_can = false;
             coin_animator = GetComponent<Animator>();
-            StartCoroutine(coin_anim());
+            StartCoroutine("coin_anim");
         }
     }
 
@@ -21,6 +22,6 @@ public class coin_take : MonoBehaviour
         coin_animator.enabled = true;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
-        shop_skins.money += 20f;
+        shop.money += coin_add;
     }
 }

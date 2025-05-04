@@ -20,6 +20,7 @@ public class game_ui : MonoBehaviour
     [SerializeField] private Animator blackout_fon_animator;
     [SerializeField] private Text lvl_text;
     [SerializeField] private Toggle on_off_fps_toggle;
+    [SerializeField] public static int coin_drop_add = 25;
 
     private void Start()
     {
@@ -44,7 +45,7 @@ public class game_ui : MonoBehaviour
         drop_coins();
         on_off_fps();
 
-        money_text.text = "Денег: " + shop_skins.money;
+        money_text.text = "Денег: " + shop.money;
     }
 
     public void exit_game()
@@ -96,7 +97,7 @@ public class game_ui : MonoBehaviour
             coin_drop_vector = new Vector3(Random.Range(0, 800), Random.Range(0, 400), 0);
             coin_drop.transform.position = coin_drop_vector;
             coin_drop.SetActive(true);
-            timer_for_drop_coin = 25f;
+            timer_for_drop_coin = 30f;
         }
     }
 
@@ -109,7 +110,7 @@ public class game_ui : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         timer_for_drop_coin = 25f;
         coin_drop.SetActive(false);
-        shop_skins.money += 50f;
+        shop.money += coin_drop_add;
     }
 
     private void check_lvl() {

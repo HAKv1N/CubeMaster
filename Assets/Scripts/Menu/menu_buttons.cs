@@ -13,6 +13,7 @@ public class menu_buttons : MonoBehaviour
     [SerializeField] private GameObject blackout_fon;
     [SerializeField] private Animator blackout_fon_animator;
     [SerializeField] private GameObject level_choose_panel;
+    [SerializeField] private GameObject info_panel;
 
     private void Start() {
         ui_interface.SetActive(true);
@@ -28,7 +29,7 @@ public class menu_buttons : MonoBehaviour
     }
 
     private void Update() {
-        moneys_text.text = "Денег: " + (int) shop_skins.money;
+        moneys_text.text = "Денег: " + (int) shop.money;
     }
 
     public void start_game() {
@@ -57,5 +58,9 @@ public class menu_buttons : MonoBehaviour
     public void close_shop() {
         ui_interface.SetActive(true);
         ui_shop.SetActive(false);
+    }
+
+    public void info_settings() {
+        info_panel.SetActive(!info_panel.activeSelf);
     }
 }

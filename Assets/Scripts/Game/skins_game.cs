@@ -12,7 +12,7 @@ public class skins_game : MonoBehaviour
     [SerializeField] public static GameObject player_2_main;
 
     private void Start() {
-        skin_id = shop_skins.skin_id;
+        skin_id = shop.skin_id;
         if (skin_id <= 0) {
             player_1_main = player_1;
             player_2_main = player_2;
