@@ -7,11 +7,11 @@ public class shop_skins : MonoBehaviour
     [SerializeField] private GameObject skins_panel;
     [SerializeField] public static int skin_id = 0;
     [SerializeField] public static float money = 1000f;
-    [SerializeField] public static bool[] skins_buy = new bool[5];
+    [SerializeField] public static bool[] skins_buy = new bool[12];
     [SerializeField] private Sprite cross_icon;
     [SerializeField] private Sprite tick_icon;
-    [SerializeField] private Image[] buy_success_image = new Image[5];
-    [SerializeField] private GameObject[] frames_buy = new GameObject[5];
+    [SerializeField] private Image[] buy_success_image = new Image[12];
+    [SerializeField] private GameObject[] frames_buy = new GameObject[12];
 
     private void Start() {
         check_buy();
@@ -40,6 +40,34 @@ public class shop_skins : MonoBehaviour
 
         if (skins_buy[4]) {
             buy_success_image[4].sprite = tick_icon;
+        }
+
+        if (skins_buy[5]) {
+            buy_success_image[5].sprite = tick_icon;
+        }
+
+        if (skins_buy[6]) {
+            buy_success_image[6].sprite = tick_icon;
+        }
+
+        if (skins_buy[7]) {
+            buy_success_image[7].sprite = tick_icon;
+        }
+
+        if (skins_buy[8]) {
+            buy_success_image[8].sprite = tick_icon;
+        }
+
+        if (skins_buy[9]) {
+            buy_success_image[9].sprite = tick_icon;
+        }
+
+        if (skins_buy[10]) {
+            buy_success_image[10].sprite = tick_icon;
+        }
+
+        if (skins_buy[11]) {
+            buy_success_image[11].sprite = tick_icon;
         }
 
         
@@ -166,11 +194,53 @@ public class shop_skins : MonoBehaviour
 
     public void skin_6_set() {
         if (skins_buy[5]) {
-            skin_id = 5;
+            skin_id = 6;
             for (int i = 0; i < frames_buy.Length; i++) {
                 frames_buy[i].SetActive(false);
             }
             frames_buy[5].SetActive(true);
+        }
+    }
+
+    //skin_7
+    public void buy_skin_7() {
+        if (money >= 400f) {
+            if (!skins_buy[6]) {
+                skins_buy[6] = true;
+                money -= 400f;
+                buy_success_image[6].sprite = tick_icon;
+            }
+        }
+    }
+
+    public void skin_7_set() {
+        if (skins_buy[6]) {
+            skin_id = 7;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[6].SetActive(true);
+        }
+    }
+
+    //skin_8
+    public void buy_skin_8() {
+        if (money >= 400f) {
+            if (!skins_buy[7]) {
+                skins_buy[7] = true;
+                money -= 400f;
+                buy_success_image[7].sprite = tick_icon;
+            }
+        }
+    }
+
+    public void skin_8_set() {
+        if (skins_buy[7]) {
+            skin_id = 8;
+            for (int i = 0; i < frames_buy.Length; i++) {
+                frames_buy[i].SetActive(false);
+            }
+            frames_buy[7].SetActive(true);
         }
     }
 }

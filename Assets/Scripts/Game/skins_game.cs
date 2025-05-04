@@ -6,8 +6,8 @@ public class skins_game : MonoBehaviour
     [SerializeField] private int skin_id;
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
-    [SerializeField] private GameObject[] skins_1 = new GameObject[6];
-    [SerializeField] private GameObject[] skins_2 = new GameObject[6];
+    [SerializeField] private GameObject[] skins_1 = new GameObject[12];
+    [SerializeField] private GameObject[] skins_2 = new GameObject[12];
     [SerializeField] public static GameObject player_1_main;
     [SerializeField] public static GameObject player_2_main;
 
@@ -73,6 +73,42 @@ public class skins_game : MonoBehaviour
             player_1_main = Instantiate(player_1_main);
 
             player_2_main = skins_2[4];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 6) {
+            player_1_main = skins_1[5];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[5];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 7) {
+            player_1_main = skins_1[6];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[6];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 8) {
+            player_1_main = skins_1[7];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[7];
             player_2_main.transform.position = player_2.transform.position;
             Destroy(player_2);
             player_2_main = Instantiate(player_2_main);
