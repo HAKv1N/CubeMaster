@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Potion : MonoBehaviour
@@ -11,6 +10,7 @@ public class Potion : MonoBehaviour
     [SerializeField] private bool can_take_potion = true;
     [SerializeField] private Animator potion_animator;
     [SerializeField] private GameObject effects;
+    [SerializeField] private AudioSource potion_audio => GetComponent<AudioSource>();
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,6 +22,7 @@ public class Potion : MonoBehaviour
 
     IEnumerator take_potion() {
         potion_animator.enabled = true;
+        potion_audio.enabled = true;
         Player.can_move = false;
         effects.SetActive(true);
 

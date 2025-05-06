@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Activator : MonoBehaviour
@@ -10,27 +7,24 @@ public class Activator : MonoBehaviour
     public Activator button;
     public Material normal;
     public Material transparent;
+    [SerializeField] private AudioSource button_audio => GetComponent<AudioSource>();
   
 
     private void OnTriggerEnter(Collider other)
     {
-      
+        if (other.CompareTag("Cube") || other.CompareTag("Player")) {
+            button_audio.enabled = true;
+            button_audio.Play();
 
+            foreach (GameObject first in firstGroup) {
+                first.GetComponent<Renderer>().material = normal;
+                first.GetComponent<Collider>().isTrigger = false;
+            }
 
-            if (other.CompareTag("Cube") || other.CompareTag("Player"))
-            {
-                foreach (GameObject first in firstGroup)
-                {
-                    first.GetComponent<Renderer>().material = normal;
-                    first.GetComponent<Collider>().isTrigger = false;
-                }
-                foreach (GameObject second in secondGroup)
-                {
-                    second.GetComponent<Renderer>().material = transparent;
-                    second.GetComponent<Collider>().isTrigger = true;
-
-                }
-          
+            foreach (GameObject second in secondGroup) {
+                second.GetComponent<Renderer>().material = transparent;
+                second.GetComponent<Collider>().isTrigger = true;
+            }
         }
     }
 }

@@ -37,55 +37,12 @@ public class shop : MonoBehaviour
     }
 
     private void check_buy_skins() {
-        if (skins_buy[0]) {
-            buy_success_image[0].sprite = tick_icon;
+        for (int id = 0; id < skins_buy.Length; id ++) {
+            if (skins_buy[id]) {
+                buy_success_image[id].sprite = tick_icon;
+            }
         }
 
-        if (skins_buy[1]) {
-            buy_success_image[1].sprite = tick_icon;
-        }
-
-        if (skins_buy[2]) {
-            buy_success_image[2].sprite = tick_icon;
-        }
-
-        if (skins_buy[3]) {
-            buy_success_image[3].sprite = tick_icon;
-        }
-
-        if (skins_buy[4]) {
-            buy_success_image[4].sprite = tick_icon;
-        }
-
-        if (skins_buy[5]) {
-            buy_success_image[5].sprite = tick_icon;
-        }
-
-        if (skins_buy[6]) {
-            buy_success_image[6].sprite = tick_icon;
-        }
-
-        if (skins_buy[7]) {
-            buy_success_image[7].sprite = tick_icon;
-        }
-
-        if (skins_buy[8]) {
-            buy_success_image[8].sprite = tick_icon;
-        }
-
-        if (skins_buy[9]) {
-            buy_success_image[9].sprite = tick_icon;
-        }
-
-        if (skins_buy[10]) {
-            buy_success_image[10].sprite = tick_icon;
-        }
-
-        if (skins_buy[11]) {
-            buy_success_image[11].sprite = tick_icon;
-        }
-
-        
         if (skin_id > 0) {
             frames_buy[skin_id - 1].SetActive(true);
         }

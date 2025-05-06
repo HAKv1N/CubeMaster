@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using UnityEngine.AI;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class KeyActivator : MonoBehaviour
 {

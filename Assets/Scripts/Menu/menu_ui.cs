@@ -5,10 +5,10 @@ public class menu_ui : MonoBehaviour
 {
     [SerializeField] public static float music_volume = 0.2f;
     [SerializeField] private Slider music_volume_slider;
-    [SerializeField] private AudioSource audiosource => GetComponent<AudioSource>();
+    [SerializeField] private AudioSource music_audio => GetComponent<AudioSource>();
 
     private void Start() {
-        audiosource.volume = music_volume;
+        music_audio.volume = music_volume;
         music_volume_slider.value = music_volume;
     }
 
@@ -18,6 +18,6 @@ public class menu_ui : MonoBehaviour
 
     private void volume_change() {
         music_volume = music_volume_slider.value;
-        audiosource.volume = music_volume;
+        music_audio.volume = music_volume;
     }
 }
