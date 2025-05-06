@@ -59,7 +59,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884530068659077820, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.2529032
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2884530068659077820, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -113,7 +113,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube 2 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1696417558184391561, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -146,7 +147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3126512712409953668, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.2529032
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3126512712409953668, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,7 +197,8 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4221391196342104929, guid: c488056f48f31b44897e36a844c7576a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -221,6 +223,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2884530068659077820, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
       propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884530068659077820, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
+      propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2884530068659077820, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
@@ -267,7 +273,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1696417558184391561, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -485,6 +492,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3126512712409953668, guid: c488056f48f31b44897e36a844c7576a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126512712409953668, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
@@ -528,7 +539,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4221391196342104929, guid: c488056f48f31b44897e36a844c7576a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

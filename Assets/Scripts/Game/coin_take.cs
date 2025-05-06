@@ -7,12 +7,14 @@ public class coin_take : MonoBehaviour
     [SerializeField] private bool coin_take_can = true;
     [SerializeField] public static int coin_add = 20;
     [SerializeField] private GameObject effects;
+    [SerializeField] private AudioSource coin_audio;
 
     private void OnTriggerEnter(Collider other)
     {
         if (CompareTag("Coin") && other.CompareTag("Player") && coin_take_can) {
             coin_take_can = false;
             coin_animator = GetComponent<Animator>();
+            coin_audio = GetComponent<AudioSource>();
             StartCoroutine("coin_anim");
         }
     }
@@ -20,6 +22,7 @@ public class coin_take : MonoBehaviour
     IEnumerator coin_anim() {
         effects.SetActive(true);
         coin_animator.enabled = true;
+        coin_audio.enabled = true;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         shop.money += coin_add;
