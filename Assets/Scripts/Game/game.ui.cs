@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,6 +21,7 @@ public class game_ui : MonoBehaviour
     [SerializeField] private Text lvl_text;
     [SerializeField] private Toggle on_off_fps_toggle;
     [SerializeField] public static int coin_drop_add = 25;
+    [SerializeField] private GameObject key_icon;
 
     private void Start()
     {
@@ -44,6 +45,7 @@ public class game_ui : MonoBehaviour
         check_fps();
         drop_coins();
         on_off_fps();
+        check_keys();
 
         money_text.text = "Денег: " + shop.money;
     }
@@ -119,5 +121,15 @@ public class game_ui : MonoBehaviour
 
     private void on_off_fps() {
         can_check_fps = on_off_fps_toggle.isOn;
+    }
+
+    private void check_keys() {
+        if (Player.key >= 1) {
+            key_icon.SetActive(true);
+        }
+
+        else {
+            key_icon.SetActive(false);
+        }
     }
 }
