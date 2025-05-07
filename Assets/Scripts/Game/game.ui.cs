@@ -21,7 +21,7 @@ public class game_ui : MonoBehaviour
     [SerializeField] private Text lvl_text;
     [SerializeField] private Toggle on_off_fps_toggle;
     [SerializeField] public static int coin_drop_add = 25;
-    [SerializeField] private GameObject key_icon;
+    [SerializeField] private Text x_text;
 
     private void Start()
     {
@@ -124,12 +124,6 @@ public class game_ui : MonoBehaviour
     }
 
     private void check_keys() {
-        if (Player.key >= 1) {
-            key_icon.SetActive(true);
-        }
-
-        else {
-            key_icon.SetActive(false);
-        }
+        x_text.text = "x" + Player.key;
     }
 }

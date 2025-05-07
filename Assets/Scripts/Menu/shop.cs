@@ -1,4 +1,4 @@
-using System;
+ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -232,6 +232,7 @@ public class shop : MonoBehaviour
     public void skin_9_set() {
         if (ads_viewed_for_skin[0] == 0 && skins_buy[8]) {
             skin_id = 9;
+            Debug.Log("success! set skin: " + skin_id);
             for (int i = 0; i < frames_buy.Length; i++) {
                 frames_buy[i].SetActive(false);
             }

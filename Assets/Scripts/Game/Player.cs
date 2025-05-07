@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Security;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using static UnityEngine.UI.Image;
 
 public class Player: MonoBehaviour
 {
@@ -12,6 +9,7 @@ public class Player: MonoBehaviour
     [SerializeField] public Vector3 moveDirection = new Vector3(1, 0, 0);
     [SerializeField] public static bool can_move = true;
     [SerializeField] public static int key = 0;
+    [SerializeField] private GameObject door_obj;
 
     private void FixedUpdate() {
         Movement();
@@ -36,17 +34,23 @@ public class Player: MonoBehaviour
         if (CompareTag("Player") && other.CompareTag("Finish")) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-
-        if (CompareTag("Player") && other.CompareTag("Dead")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Door") && key >= 1) {
-            Destroy(collision.gameObject);
+            door_obj = collision.gameObject;
+            StartCoroutine("open_door");
+        }
+    }
+
+    IEnumerator open_door() {
+        door_obj.GetComponent<AudioSource>().enabled = true;
+            
+        yield return new WaitForSeconds(1f);
+        if (door_obj != null) {
             key -= 1;
+            Destroy(door_obj.gameObject);
         }
     }
 }

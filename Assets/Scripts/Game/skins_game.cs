@@ -113,5 +113,53 @@ public class skins_game : MonoBehaviour
             Destroy(player_2);
             player_2_main = Instantiate(player_2_main);
         }
+
+        if (skin_id == 9) {
+            player_1_main = skins_1[8];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[8];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 10) {
+            player_1_main = skins_1[9];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[9];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 11) {
+            player_1_main = skins_1[10];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[10];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
+
+        if (skin_id == 12) {
+            player_1_main = skins_1[11];
+            player_1_main.transform.position = player_1.transform.position;
+            Destroy(player_1);
+            player_1_main = Instantiate(player_1_main);
+
+            player_2_main = skins_2[11];
+            player_2_main.transform.position = player_2.transform.position;
+            Destroy(player_2);
+            player_2_main = Instantiate(player_2_main);
+        }
     }
 }
