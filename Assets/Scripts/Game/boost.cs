@@ -18,7 +18,7 @@ public class Boost : MonoBehaviour
         if (CompareTag("Boost") && other.CompareTag("Player")) {
             Player player = other.gameObject.GetComponent<Player>();
 
-            player.moveDirection -= player_moveDirection_start;
+            player.moveDirection = player_moveDirection_start;
         }
     }
 }
