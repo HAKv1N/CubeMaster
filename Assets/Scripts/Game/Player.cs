@@ -46,6 +46,7 @@ public class Player: MonoBehaviour
 
     IEnumerator open_door() {
         door_obj.GetComponent<AudioSource>().enabled = true;
+        door_obj.GetComponentInChildren<Animator>().enabled = true;
             
         yield return new WaitForSeconds(1f);
         if (door_obj != null) {

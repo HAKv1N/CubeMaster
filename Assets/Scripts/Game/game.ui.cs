@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -109,6 +108,7 @@ public class game_ui : MonoBehaviour
     }
 
     IEnumerator get_coin() {
+        coin_drop.GetComponent<AudioSource>().enabled = true;
         yield return new WaitForSeconds(0.5f);
         timer_for_drop_coin = 25f;
         coin_drop.SetActive(false);

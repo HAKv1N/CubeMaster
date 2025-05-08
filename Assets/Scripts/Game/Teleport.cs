@@ -22,6 +22,7 @@ public class Teleport : MonoBehaviour
     IEnumerator teleport_on() {
         effects.SetActive(true);
         teleport_audio.enabled = true;
+        teleport_audio.Play();
         teleport_out_vector = teleport_out.transform.position;
         can_teleport = false;
         Player.can_move = false;
