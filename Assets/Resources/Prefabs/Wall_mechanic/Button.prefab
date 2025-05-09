@@ -125,9 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstGroup:
   - {fileID: 0}
-  - {fileID: 0}
   secondGroup:
-  - {fileID: 0}
   - {fileID: 0}
   button: {fileID: 0}
   normal: {fileID: 2100000, guid: 92e61415db71b4549b1cdc7f9d20f7f3, type: 2}

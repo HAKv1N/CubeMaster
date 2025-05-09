@@ -879,6 +879,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.2
+--- !u!1 &567276420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2792911744494873363, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+  m_PrefabInstance: {fileID: 6966269299302464106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &581397574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8249373938825668608, guid: 1fa961b416322934a91f2beb62b0899a, type: 3}
@@ -2013,6 +2018,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1087152678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7660820937754721728, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+  m_PrefabInstance: {fileID: 6966269299302464106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148903442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,6 +2760,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398479464}
   m_CullTransparentMesh: 1
+--- !u!1 &1399013148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2089694145672945255, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+  m_PrefabInstance: {fileID: 6966269299302464106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408465008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,6 +4266,26 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6255396019891365880, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+      propertyPath: firstGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255396019891365880, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+      propertyPath: secondGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255396019891365880, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+      propertyPath: 'firstGroup.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1399013148}
+    - target: {fileID: 6255396019891365880, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+      propertyPath: 'firstGroup.Array.data[1]'
+      value: 
+      objectReference: {fileID: 567276420}
+    - target: {fileID: 6255396019891365880, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
+      propertyPath: 'secondGroup.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1087152678}
     - target: {fileID: 8464098104480585867, guid: 1bfb421c17379c14395614af6b1c8293, type: 3}
       propertyPath: m_Name
       value: Mechanic_Wall
