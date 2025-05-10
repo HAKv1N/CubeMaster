@@ -50,10 +50,10 @@ public class shop : MonoBehaviour
 
     //skin_1
     public void buy_skin_1() {
-        if (money >= 100f) {
+        if (money >= 150f) {
             if (!skins_buy[0]) {
                 skins_buy[0] = true;
-                money -= 100f;
+                money -= 150f;
                 buy_success_image[0].sprite = tick_icon;
             }
         }
@@ -71,10 +71,10 @@ public class shop : MonoBehaviour
 
     //skin_2
     public void buy_skin_2() {
-        if (money >= 100f) {
+        if (money >= 150f) {
             if (!skins_buy[1]) {
                 skins_buy[1] = true;
-                money -= 100f;
+                money -= 150f;
                 buy_success_image[1].sprite = tick_icon;
             }
         }
@@ -92,10 +92,10 @@ public class shop : MonoBehaviour
 
     //skin_3
     public void buy_skin_3() {
-        if (money >= 200f) {
+        if (money >= 300f) {
             if (!skins_buy[2]) {
                 skins_buy[2] = true;
-                money -= 200f;
+                money -= 300f;
                 buy_success_image[2].sprite = tick_icon;
             }
         }
@@ -113,10 +113,10 @@ public class shop : MonoBehaviour
 
     //skin_4
     public void buy_skin_4() {
-        if (money >= 200f) {
+        if (money >= 300f) {
             if (!skins_buy[3]) {
                 skins_buy[3] = true;
-                money -= 200f;
+                money -= 300f;
                 buy_success_image[3].sprite = tick_icon;
             }
         }
@@ -134,10 +134,10 @@ public class shop : MonoBehaviour
 
     //skin_5
     public void buy_skin_5() {
-        if (money >= 300f) {
+        if (money >= 650f) {
             if (!skins_buy[4]) {
                 skins_buy[4] = true;
-                money -= 300f;
+                money -= 650f;
                 buy_success_image[4].sprite = tick_icon;
             }
         }
@@ -155,10 +155,10 @@ public class shop : MonoBehaviour
 
     //skin_6
     public void buy_skin_6() {
-        if (money >= 300f) {
+        if (money >= 650f) {
             if (!skins_buy[5]) {
                 skins_buy[5] = true;
-                money -= 300f;
+                money -= 650f;
                 buy_success_image[5].sprite = tick_icon;
             }
         }
@@ -176,10 +176,10 @@ public class shop : MonoBehaviour
 
     //skin_7
     public void buy_skin_7() {
-        if (money >= 400f) {
+        if (money >= 1200f) {
             if (!skins_buy[6]) {
                 skins_buy[6] = true;
-                money -= 400f;
+                money -= 1200f;
                 buy_success_image[6].sprite = tick_icon;
             }
         }
@@ -197,10 +197,10 @@ public class shop : MonoBehaviour
 
     //skin_8
     public void buy_skin_8() {
-        if (money >= 400f) {
+        if (money >= 1200f) {
             if (!skins_buy[7]) {
                 skins_buy[7] = true;
-                money -= 400f;
+                money -= 1200f;
                 buy_success_image[7].sprite = tick_icon;
             }
         }
@@ -232,7 +232,6 @@ public class shop : MonoBehaviour
     public void skin_9_set() {
         if (ads_viewed_for_skin[0] == 0 && skins_buy[8]) {
             skin_id = 9;
-            Debug.Log("success! set skin: " + skin_id);
             for (int i = 0; i < frames_buy.Length; i++) {
                 frames_buy[i].SetActive(false);
             }
