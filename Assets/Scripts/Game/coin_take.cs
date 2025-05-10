@@ -23,8 +23,8 @@ public class coin_take : MonoBehaviour
         effects.SetActive(true);
         coin_animator.enabled = true;
         coin_audio.enabled = true;
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
         shop.money += coin_add;
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }

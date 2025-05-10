@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6056223507826325298, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1696417558184391561, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
     m_RemovedGameObjects: []
@@ -192,6 +196,10 @@ PrefabInstance:
     - target: {fileID: 7249526975491677952, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_Name
       value: Cube 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249526975491677952, guid: c488056f48f31b44897e36a844c7576a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7443215410215695712, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_IsKinematic
@@ -273,6 +281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6056223507826325298, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1696417558184391561, guid: f4084ada6ecb77c4da6ccebce5ca89b4, type: 3}
     m_RemovedGameObjects: []
@@ -346,13 +358,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
+      propertyPath: firstGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
+      propertyPath: secondGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
       propertyPath: 'firstGroup.Array.data[0]'
       value: 
-      objectReference: {fileID: 2792911744494873363}
+      objectReference: {fileID: 2089694145672945255}
     - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
       propertyPath: 'firstGroup.Array.data[1]'
       value: 
-      objectReference: {fileID: 2089694145672945255}
+      objectReference: {fileID: 2792911744494873363}
     - target: {fileID: 1970540740078698016, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
       propertyPath: 'secondGroup.Array.data[0]'
       value: 
@@ -361,6 +381,14 @@ PrefabInstance:
       propertyPath: 'secondGroup.Array.data[1]'
       value: 
       objectReference: {fileID: 7660820937754721728}
+    - target: {fileID: 3875203547027975506, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875203547027975506, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3875203547027975506, guid: 52c7cc8346df56e41a86a955b98d81d6, type: 3}
       propertyPath: m_Center.x
       value: 0
@@ -508,6 +536,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1473705350394572155}
     m_Modifications:
     - target: {fileID: 2577349112052874347, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577349112052874347, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
@@ -566,19 +598,19 @@ PrefabInstance:
     - target: {fileID: 8071343730952510182, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: 'firstGroup.Array.data[0]'
       value: 
-      objectReference: {fileID: 7660820937754721728}
+      objectReference: {fileID: 1400231191993384480}
     - target: {fileID: 8071343730952510182, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: 'firstGroup.Array.data[1]'
       value: 
-      objectReference: {fileID: 1400231191993384480}
+      objectReference: {fileID: 7660820937754721728}
     - target: {fileID: 8071343730952510182, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: 'secondGroup.Array.data[0]'
       value: 
-      objectReference: {fileID: 2792911744494873363}
+      objectReference: {fileID: 2089694145672945255}
     - target: {fileID: 8071343730952510182, guid: 81340f37907e48f48a35d8175e16e031, type: 3}
       propertyPath: 'secondGroup.Array.data[1]'
       value: 
-      objectReference: {fileID: 2089694145672945255}
+      objectReference: {fileID: 2792911744494873363}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -764,6 +796,10 @@ PrefabInstance:
     - target: {fileID: 7249526975491677952, guid: c488056f48f31b44897e36a844c7576a, type: 3}
       propertyPath: m_Name
       value: Cube 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249526975491677952, guid: c488056f48f31b44897e36a844c7576a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4221391196342104929, guid: c488056f48f31b44897e36a844c7576a, type: 3}
