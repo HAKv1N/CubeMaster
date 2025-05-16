@@ -1855,6 +1855,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557291509932915938, guid: de6f10f1cdcada94da5e3a70746c1787, type: 3}
+      propertyPath: teleport_out
+      value: 
+      objectReference: {fileID: 1682134921}
     - target: {fileID: 8021292135564900486, guid: de6f10f1cdcada94da5e3a70746c1787, type: 3}
       propertyPath: m_Name
       value: Teleport_1
@@ -1864,6 +1868,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6f10f1cdcada94da5e3a70746c1787, type: 3}
+--- !u!1 &543234520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8021292135564900486, guid: de6f10f1cdcada94da5e3a70746c1787, type: 3}
+  m_PrefabInstance: {fileID: 543234519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &603305252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,6 +3998,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 220323822070888640, guid: 84f1afada900e9d4eaa1a96b00818d5b, type: 3}
+      propertyPath: teleport_out
+      value: 
+      objectReference: {fileID: 543234520}
     - target: {fileID: 2478136227837256970, guid: 84f1afada900e9d4eaa1a96b00818d5b, type: 3}
       propertyPath: m_Name
       value: Teleport_2
@@ -4038,6 +4051,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f1afada900e9d4eaa1a96b00818d5b, type: 3}
+--- !u!1 &1682134921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2478136227837256970, guid: 84f1afada900e9d4eaa1a96b00818d5b, type: 3}
+  m_PrefabInstance: {fileID: 1682134920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1703236771
 PrefabInstance:
   m_ObjectHideFlags: 0
