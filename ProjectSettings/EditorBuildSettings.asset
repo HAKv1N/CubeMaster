@@ -74,6 +74,120 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lvls/lvl22.unity
     guid: b779d99a8e2d053469edd9a699daf9fd
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl23.unity
+    guid: 69625ad9ab58b004592145ea7f2c9a7a
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl24.unity
+    guid: aa3a1e1875afe6240815d0ac9229f9f6
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl25.unity
+    guid: 7039cdca0c78189418ea0f41f30c587b
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl26.unity
+    guid: ac6d657adb908a345bcd82c575780a5c
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl27.unity
+    guid: c40c127ff5c3d8147bc95f2553198a99
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl28.unity
+    guid: 350b33d7b87167d41b082b60d042ceee
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl29.unity
+    guid: 0dd18b5d2cf9c3a469214c7d7133d877
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl30.unity
+    guid: bb9bc3edc75c34f4db270c52ec6e0bc5
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl31.unity
+    guid: c2b8d23e0c2a06140a2c40ccfd90176d
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl32.unity
+    guid: 71ff00676e904fa45847f457e84c9be0
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl33.unity
+    guid: 55b2f4be5a8a2594b92da4ab1f016c26
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl34.unity
+    guid: ae4c14710388b1540a8e6f083ae1a433
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl35.unity
+    guid: 5d234a7eaeafa2345a4f28cf34927bc4
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl36.unity
+    guid: bf0c372dcc50cdb438d1e8e5247edf62
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl37.unity
+    guid: 419b14459a12d2547ba265df61aa0df2
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl38.unity
+    guid: 7535480f51e5cff42af9cc2df1772f22
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl39.unity
+    guid: c3cf5e3759b229845bd9bb49f0155ddd
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl40.unity
+    guid: 91e6ef77f9f03ea4ab07ea310c48af5f
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl41.unity
+    guid: 672ef54265d971f4ca2acc6f34938666
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl42.unity
+    guid: e2824a2c701082d44bc804695654e511
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl43.unity
+    guid: e1eed283c0a0f5146bed1c2ba45ccb2b
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl44.unity
+    guid: a4dab2bbe210d9e4d8812c0da43c7cee
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl45.unity
+    guid: 127c82d33f9a2a54a8b0c2c829baa8b3
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl46.unity
+    guid: bdf98de841144aa4e9e3d9c4de213e57
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl47.unity
+    guid: 997e381d296f04747b3c548ac00d4ef6
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl48.unity
+    guid: 87ec7166a9e113a4791acc325951700f
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl49.unity
+    guid: b7086480d6335b84799a9ffa1ab35f68
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl50.unity
+    guid: 027155bcc91c48f4ea2bef9fd5f57c5b
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl51.unity
+    guid: af6ae53a1588d3c41a69ecc25faeb50d
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl52.unity
+    guid: e36615f458bac144e9970ab842bbf8da
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl53.unity
+    guid: 45d15ce3cefd763418f6620e24496e6f
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl54.unity
+    guid: b1fdd16212943724fa7cb4ee43f041a3
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl55.unity
+    guid: 18e02cf2c1d2e734c9ceadf8e9808055
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl56.unity
+    guid: f4801c88e50933b40bdb277738b3c4dc
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl57.unity
+    guid: a391f1f1e8bd95442b6f2687e506571b
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl58.unity
+    guid: 58eb24cfb4a4f2c43b99fbb482ac33f5
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl59.unity
+    guid: 4733b6b0b036d4f40840655fca6608fc
+  - enabled: 1
+    path: Assets/Scenes/Lvls/lvl60.unity
+    guid: a99eabbe37aa8e741b23d54d281f8e4f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

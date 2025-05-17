@@ -1,13 +1,14 @@
  using System;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class shop : MonoBehaviour
 {
     [SerializeField] private GameObject skins_panel;
     [SerializeField] private GameObject upgrades_panel;
     [SerializeField] public static int skin_id = 0;
-    [SerializeField] public static float money = 5000f;
+    [SerializeField] public static float money = 0f;
     [SerializeField] public static bool[] skins_buy = new bool[12];
     [SerializeField] private Sprite cross_icon;
     [SerializeField] private Sprite tick_icon;
@@ -15,9 +16,9 @@ public class shop : MonoBehaviour
     [SerializeField] private GameObject[] frames_buy = new GameObject[12];
     [SerializeField] private int[] ads_viewed_for_skin = new int[4];
     [SerializeField] private Text[] ads_viewed_texts = new Text[4];
-    [SerializeField] private static bool[] coin_upgrade_buy = new bool[3];
+    [SerializeField] public static bool[] coin_upgrade_buy = new bool[3];
     [SerializeField] private Image[] buy_success_image_coin = new Image[3];
-    [SerializeField] private static bool[] coin_drop_upgrade_buy = new bool[3];
+    [SerializeField] public static bool[] coin_drop_upgrade_buy = new bool[3];
     [SerializeField] private Image[] buy_success_image_coin_drop = new Image[3];
 
     private void Start() {
@@ -219,8 +220,7 @@ public class shop : MonoBehaviour
     //skin_9
     public void buy_skin_9() {
         if (ads_viewed_for_skin[0] != 0 && !skins_buy[8]) {
-            //...добавить скрипт с яндекса на показ рекламы с наградой
-            ads_viewed_for_skin[0] -= 1;
+            YandexGame.RewVideoShow(ads_viewed_for_skin[0] -= 1);
             ads_viewed_texts[0].text = 3 - ads_viewed_for_skin[0] + "/3";
             if (ads_viewed_for_skin[0] == 0) {
                 skins_buy[8] = true;
@@ -242,8 +242,7 @@ public class shop : MonoBehaviour
     //skin_10
     public void buy_skin_10() {
         if (ads_viewed_for_skin[1] != 0 && !skins_buy[9]) {
-            //...добавить скрипт с яндекса на показ рекламы с наградой
-            ads_viewed_for_skin[1] -= 1;
+            YandexGame.RewVideoShow(ads_viewed_for_skin[1] -= 1);
             ads_viewed_texts[1].text = 3 - ads_viewed_for_skin[1] + "/3";
             if (ads_viewed_for_skin[1] == 0) {
                 skins_buy[9] = true;
@@ -265,8 +264,7 @@ public class shop : MonoBehaviour
     //skin_11
     public void buy_skin_11() {
         if (ads_viewed_for_skin[2] != 0 && !skins_buy[10]) {
-            //...добавить скрипт с яндекса на показ рекламы с наградой
-            ads_viewed_for_skin[2] -= 1;
+            YandexGame.RewVideoShow(ads_viewed_for_skin[2] -= 1);
             ads_viewed_texts[2].text = 3 - ads_viewed_for_skin[2] + "/3";
             if (ads_viewed_for_skin[2] == 0) {
                 skins_buy[10] = true;
@@ -288,8 +286,7 @@ public class shop : MonoBehaviour
     //skin_12
     public void buy_skin_12() {
         if (ads_viewed_for_skin[3] != 0 && !skins_buy[11]) {
-            //...добавить скрипт с яндекса на показ рекламы с наградой
-            ads_viewed_for_skin[3] -= 1;
+            YandexGame.RewVideoShow(ads_viewed_for_skin[3] -= 1);
             ads_viewed_texts[3].text = 3 - ads_viewed_for_skin[3] + "/3";
             if (ads_viewed_for_skin[3] == 0) {
                 skins_buy[11] = true;

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class menu_ui : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class menu_ui : MonoBehaviour
     [SerializeField] private AudioSource music_audio => GetComponent<AudioSource>();
 
     private void Start() {
+        YandexGame.FullscreenShow();
         music_audio.volume = music_volume;
         music_volume_slider.value = music_volume;
     }

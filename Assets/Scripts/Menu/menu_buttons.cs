@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class menu_buttons : MonoBehaviour
 {
@@ -62,5 +62,9 @@ public class menu_buttons : MonoBehaviour
 
     public void info_settings() {
         info_panel.SetActive(!info_panel.activeSelf);
+    }
+
+    public void get_moneys_for_ad() {
+        YandexGame.RewVideoShow((int) (shop.money += 50));
     }
 }
