@@ -47,7 +47,7 @@ public class game_ui : MonoBehaviour
         drop_coins();
         on_off_fps();
         check_keys();
-        show_ad_on_timer();
+        // show_ad_on_timer();
 
         money_text.text = "Денег: " + shop.money;
     }
@@ -130,12 +130,12 @@ public class game_ui : MonoBehaviour
         x_text.text = "x" + Player.key;
     }
 
-    private void show_ad_on_timer() {
-        timer_for_ad -= 1 * Time.deltaTime;
+    // private void show_ad_on_timer() {
+    //     timer_for_ad -= 1 * Time.deltaTime;
 
-        if (timer_for_ad <= 0) {
-            YandexGame.FullscreenShow();
-            timer_for_ad = 90f;
-        }
-    }
+    //     if (timer_for_ad <= 0) {
+    //         YandexGame.FullscreenShow();
+    //         timer_for_ad = 90f;
+    //     }
+    // }
 }

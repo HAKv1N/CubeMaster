@@ -18,6 +18,7 @@ namespace YG
         public bool[] skins_buy = new bool[12];
         public bool[] coin_upgrade_buy = new bool[3];
         public bool[] coin_drop_upgrade_buy = new bool[3];
+        public int[] ads_viewed_for_skin = new int[4];
 
         // Ваши сохранения
 

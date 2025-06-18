@@ -14,20 +14,29 @@ public class shop : MonoBehaviour
     [SerializeField] private Sprite tick_icon;
     [SerializeField] private Image[] buy_success_image = new Image[12];
     [SerializeField] private GameObject[] frames_buy = new GameObject[12];
-    [SerializeField] private int[] ads_viewed_for_skin = new int[4];
+    [SerializeField] public static int[] ads_viewed_for_skin = new int[4];
     [SerializeField] private Text[] ads_viewed_texts = new Text[4];
     [SerializeField] public static bool[] coin_upgrade_buy = new bool[3];
     [SerializeField] private Image[] buy_success_image_coin = new Image[3];
     [SerializeField] public static bool[] coin_drop_upgrade_buy = new bool[3];
     [SerializeField] private Image[] buy_success_image_coin_drop = new Image[3];
 
-    private void Start() {
+    private void Start()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            ads_viewed_for_skin[i] = 3;
+        }
+    }
+    
+    private void Update() {
         check_buy_skins();
         check_buy_coin_upgrade();
         check_buy_coin_drop_upgrade();
     }
 
-    public void open_skins_buy() {
+    public void open_skins_buy()
+    {
         skins_panel.SetActive(!skins_panel.activeSelf);
         upgrades_panel.SetActive(false);
     }
@@ -216,18 +225,55 @@ public class shop : MonoBehaviour
             frames_buy[7].SetActive(true);
         }
     }
-
-    //skin_9
-    public void buy_skin_9() {
-        if (ads_viewed_for_skin[0] != 0 && !skins_buy[8]) {
-            YandexGame.RewVideoShow(ads_viewed_for_skin[0] -= 1);
-            ads_viewed_texts[0].text = 3 - ads_viewed_for_skin[0] + "/3";
-            if (ads_viewed_for_skin[0] == 0) {
-                skins_buy[8] = true;
-                buy_success_image[8].sprite = tick_icon;
-            }
+    
+    //REWARD FOR AD
+    private void Reward(int skinNumber)
+    {
+        ads_viewed_for_skin[skinNumber] -= 1;
+        
+        // Обновляем текст
+        ads_viewed_texts[skinNumber].text = (3 - ads_viewed_for_skin[skinNumber]) + "/3";
+        
+        // Проверяем, достигнут ли необходимый просмотров
+        if (ads_viewed_for_skin[skinNumber] == 0)
+        {
+            int skinIndex = skinNumber + 8; // так как skin_9 соответствует индексу 8
+            skins_buy[skinIndex] = true;
+            buy_success_image[skinIndex].sprite = tick_icon;
         }
     }
+
+    // Общий метод для покупки скинов через рекламу
+    public void BuySkinWithAds(int skinNumber)
+    {
+        if (!skins_buy[skinNumber + 8] && ads_viewed_for_skin[skinNumber] > 0)
+        {
+            // Подписываемся на событие успешного просмотра рекламы
+            YandexGame.RewardVideoEvent += OnRewardVideoShown;
+            // Сохраняем номер скина для использования в callback
+            lastRequestedSkin = skinNumber;
+            // Показываем рекламу
+            YandexGame.RewVideoShow(skinNumber);
+        }
+    }
+
+    private int lastRequestedSkin = -1;
+
+    // Callback, который вызывается после успешного просмотра рекламы
+    private void OnRewardVideoShown(int id)
+    {
+        // Проверяем, что это наш вызов (id соответствует skinNumber)
+        if (id == lastRequestedSkin)
+        {
+            Reward(id);
+            // Отписываемся от события
+            YandexGame.RewardVideoEvent -= OnRewardVideoShown;
+            lastRequestedSkin = -1;
+        }
+    }
+
+    //skin_9
+    public void buy_skin_9() => BuySkinWithAds(0);
 
     public void skin_9_set() {
         if (ads_viewed_for_skin[0] == 0 && skins_buy[8]) {
@@ -240,16 +286,7 @@ public class shop : MonoBehaviour
     }
 
     //skin_10
-    public void buy_skin_10() {
-        if (ads_viewed_for_skin[1] != 0 && !skins_buy[9]) {
-            YandexGame.RewVideoShow(ads_viewed_for_skin[1] -= 1);
-            ads_viewed_texts[1].text = 3 - ads_viewed_for_skin[1] + "/3";
-            if (ads_viewed_for_skin[1] == 0) {
-                skins_buy[9] = true;
-                buy_success_image[9].sprite = tick_icon;
-            }
-        }
-    }
+    public void buy_skin_10() => BuySkinWithAds(1);
 
     public void skin_10_set() {
         if (ads_viewed_for_skin[1] == 0 && skins_buy[9]) {
@@ -262,16 +299,7 @@ public class shop : MonoBehaviour
     }
 
     //skin_11
-    public void buy_skin_11() {
-        if (ads_viewed_for_skin[2] != 0 && !skins_buy[10]) {
-            YandexGame.RewVideoShow(ads_viewed_for_skin[2] -= 1);
-            ads_viewed_texts[2].text = 3 - ads_viewed_for_skin[2] + "/3";
-            if (ads_viewed_for_skin[2] == 0) {
-                skins_buy[10] = true;
-                buy_success_image[10].sprite = tick_icon;
-            }
-        }
-    }
+    public void buy_skin_11() => BuySkinWithAds(2);
 
     public void skin_11_set() {
         if (ads_viewed_for_skin[2] == 0 && skins_buy[10]) {
@@ -284,16 +312,7 @@ public class shop : MonoBehaviour
     }
 
     //skin_12
-    public void buy_skin_12() {
-        if (ads_viewed_for_skin[3] != 0 && !skins_buy[11]) {
-            YandexGame.RewVideoShow(ads_viewed_for_skin[3] -= 1);
-            ads_viewed_texts[3].text = 3 - ads_viewed_for_skin[3] + "/3";
-            if (ads_viewed_for_skin[3] == 0) {
-                skins_buy[11] = true;
-                buy_success_image[11].sprite = tick_icon;
-            }
-        }
-    }
+    public void buy_skin_12() => BuySkinWithAds(3);
 
     public void skin_12_set() {
         if (ads_viewed_for_skin[3] == 0 && skins_buy[11]) {

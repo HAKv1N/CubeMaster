@@ -11,13 +11,14 @@ public class select_level : MonoBehaviour
     [SerializeField] private int lvl_id;
     [SerializeField] private GameObject blackout_fon;
     [SerializeField] private Animator blackout_fon_animator;
-
-    private void Start() {
+    
+    private void Update() {
         check_lvl_complete();
         update_text();
     }
 
-    public void RunLevel() {
+    public void RunLevel()
+    {
         StartCoroutine("start_game_button");
     }
 

@@ -1,2 +1,2 @@
-Build path: C:/Users/egorp/Desktop/CubeMaster_Alpha_1.0
-Build number: 1
+Build path: C:/Users/egorp/Desktop/test
+Build number: 7

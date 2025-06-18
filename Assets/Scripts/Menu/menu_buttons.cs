@@ -60,11 +60,22 @@ public class menu_buttons : MonoBehaviour
         ui_shop.SetActive(false);
     }
 
-    public void info_settings() {
-        info_panel.SetActive(!info_panel.activeSelf);
+    public void GetMoneyForAd()
+    {
+        // Подписываемся на событие успешного просмотра
+        YandexGame.RewardVideoEvent += OnRewardAdWatched;
+        
+        // Показываем рекламу (id можно использовать для разных типов наград)
+        YandexGame.RewVideoShow(0); 
     }
 
-    public void get_moneys_for_ad() {
-        YandexGame.RewVideoShow((int) (shop.money += 50));
+    // Этот метод вызовется только если игрок досмотрел рекламу
+    private void OnRewardAdWatched(int rewardId)
+    {
+        // Даём 50 монет
+        shop.money += 50;
+        
+        // Отписываемся от события, чтобы не было утечек памяти
+        YandexGame.RewardVideoEvent -= OnRewardAdWatched;
     }
 }
