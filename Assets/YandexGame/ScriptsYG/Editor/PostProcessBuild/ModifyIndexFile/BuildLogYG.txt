@@ -1,2 +1,2 @@
-Build path: C:/Users/egorp/Desktop/test
-Build number: 7
+Build path: C:/Users/egorp/Desktop/Alpha_1.1
+Build number: 10

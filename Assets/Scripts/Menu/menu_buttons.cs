@@ -50,7 +50,13 @@ public class menu_buttons : MonoBehaviour
         audio_panel.SetActive(!audio_panel.activeSelf);
     }
 
-    public void open_shop() {
+    public void info_settings()
+    {
+        info_panel.SetActive(!info_panel.activeSelf);
+    }
+
+    public void open_shop()
+    {
         ui_interface.SetActive(false);
         ui_shop.SetActive(true);
     }
